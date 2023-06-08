@@ -15,20 +15,13 @@ export default function Nativation() {
     <div className={(`header ${scroll ? 'shadow' : ''}`)} id='header'>
       <a href='#home' className='logo'>
         <i className='bx bxs-movie' ></i>
-        <p>MOVIES THEATER</p>
+        <p>MOVIE-NHK</p>
       </a>
-      <div className='bx bx-menu' id='menu-icon'>
-        <i className='bx bx-menu' ></i>
-      </div>
-
       <ul className='navbar'>
-        <li><a href='#home'>Movies</a></li>
-        <li><a href='#home'>Comming</a></li>
         <li><Link to='/'>Home</Link></li>
-        <li><a href='#home'>Newsletter</a></li>
         <li><Link to='/about'>About</Link></li>
+        <li><Link to='/contact'>Contact</Link></li>
       </ul>
-      <a href='#' className='btn'>Sign In</a>
     </div>
   )
 }

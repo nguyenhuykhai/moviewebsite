@@ -10,6 +10,7 @@ import { Box, styled } from "@mui/system";
 import Modal from "@mui/base/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/base/Button";
+import { Grid } from "@mui/material";
 
 export default function Detail() {
   //Get API
@@ -62,11 +63,10 @@ export default function Detail() {
 
             <div className={clsx(styles.videoBoxContent)}>
               <h2 className={clsx(styles.title)}>{data.name}</h2>
-              <h3 className={clsx(styles.headline)}>{data.origin_name}</h3>
-              <p className={clsx(styles.description)}>{converToHTML(data.content)}</p>
               <p className={clsx(styles.type)}>
-                {data.time} | {data.type} | {data.quality}
+                Duration: {data.time} <br></br>Type: {data.type}<br></br>Quality: {data.quality}
               </p>
+              <p className={clsx(styles.description)}>{converToHTML(data.content)}</p>
             </div>
           </div>
           
@@ -86,29 +86,21 @@ export default function Detail() {
             <Fade in={open}>
               <Box sx={style}>
                 <iframe
-                  className={clsx(styles.video)}
                   src={video}
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
+                  width="100%"
+                  height="100%"
                 ></iframe>
-                <h2 className={clsx(styles.title)} id="transition-modal-title">
-                  {data.name}
-                </h2>
-                <span
-                  id="transition-modal-description"
-                  className={clsx(styles.popupText)}
-                >
-                  {data.time} | {data.type} | {data.quality}
-                </span>
               </Box>
             </Fade>
           </StyledModal>
         </div>
 
         {/* Sidebar */}
-        <div className={clsx(styles.sidebar)}>
+        {/* <div className={clsx(styles.sidebar)}>
           <div className={clsx(styles.boxMovieWrapper)}>
             <div className={clsx(styles.boxMovieList)}>
               <div className={clsx(styles.boxMovieItem)}>
@@ -137,7 +129,7 @@ export default function Detail() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
@@ -200,23 +192,27 @@ const StyledBackdrop = styled(Backdrop)`
 
 const style = (theme) => ({
   position: "absolute",
+  margin: "1em auto",
+  width:"80%",
+  height: "calc(.5256 * 80vw)",
+  maxWidth:"1280px",
+  maxHeight: "720px",
+  minWidth: "320",
+  minHeight: "180px",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
   borderRadius: "12px",
   padding: "16px 32px 24px 32px",
-  width: "50%",
-  height: "90%",
   backgroundColor: theme.palette.mode === "white" ? "dark"  : "#020307",
   boxShadow: `0px 2px 24px ${
     theme.palette.mode === "dark" ? "#000" : "#383838"
   }`,
 });
 
+
 const TriggerButton = styled(Button)(
   ({ theme }) => `
-
   font-family: IBM Plex Sans, sans-serif;
   font-size: 0.875rem;
   font-weight: 600;

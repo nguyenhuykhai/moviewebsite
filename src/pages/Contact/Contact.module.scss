@@ -21,8 +21,7 @@
 .firstScript {
   box-sizing: border-box;
   width: 100%;
-  display: grid;
-  grid-template-rows: 20% 80%;
+  padding: 0 2%;
 }
 .secondScript {
   box-sizing: border-box;
@@ -34,34 +33,40 @@
 .headline {
   width: auto;
   word-wrap: break-word;
-  padding: 0 2%;
-}
-.headline p {
-  text-align: justify;
-  font-size: medium;
 }
 .title {
   font-size: 3rem;
   font-weight: 600;
 }
-.pressBlock {
-  width: auto;
-  text-align: justify;
-}
-.pressBlock p {
+.container {
+  display: grid;
+  grid-template-rows: 40% 60%;
+  grid-gap: 1rem;
   justify-content: center;
-  font-size: medium;
-  line-height: 2rem;
-  padding: 2%;
+  padding-bottom: 1.5rem;
 }
-
+.formInput {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-gap: 1rem;
+}
+.formControl,
+.formTextArea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.formTextArea {
+  height: 200px;
+}
+.textCenter {
+  display: flex;
+  justify-content: space-around;
+}
 @media (max-width: 991px) {
-  .pressBlock,
-  .pressBlock p,
-  .headline,
-  .headline p,
-  .firstScript,
-  .secondScript {
+  .firstScript {
     padding-left: 0;
   }
 }
@@ -74,3 +79,14 @@
     margin-right: auto;
   }
 }
+@media (max-width: 440px) {
+    .textCenter {
+      display: grid;
+      align-items: center;
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-gap: 0.5rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

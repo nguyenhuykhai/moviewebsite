@@ -42,9 +42,6 @@ export default function Home() {
                             <span>Marvel Universe</span>
                             <h1>Guardians off the Galaxy <br></br>Volume 2</h1>
                             <a href='' className='btn'>Book Now</a>
-                            <a href='' className='play'>
-                                <i className='bx bx-play'></i>
-                            </a>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -55,9 +52,6 @@ export default function Home() {
                             <span>Marvel Universe</span>
                             <h1>Thor: <br></br>Love and Thunder</h1>
                             <a href='' className='btn'>Book Now</a>
-                            <a href='' className='play'>
-                                <i className='bx bx-play'></i>
-                            </a>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -68,9 +62,6 @@ export default function Home() {
                             <span>Marvel Universe</span>
                             <h1>Spider-Man <br></br>No Way Home</h1>
                             <a href='' className='btn'>Book Now</a>
-                            <a href='' className='play'>
-                                <i className='bx bx-play'></i>
-                            </a>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -81,9 +72,6 @@ export default function Home() {
                             <span>Marvel Universe</span>
                             <h1>Avengers: <br></br>End Game</h1>
                             <a href='' className='btn'>Book Now</a>
-                            <a href='' className='play'>
-                                <i className='bx bx-play'></i>
-                            </a>
                         </div>
                     </div>
                 </SwiperSlide>

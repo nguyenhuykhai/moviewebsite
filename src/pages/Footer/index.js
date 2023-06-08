@@ -9,7 +9,7 @@ export default function Footer() {
     <section className='footer'>
         <a href='#' className='logo'>
             <i className='bx bxs-movie' ></i>
-            <p>MOVIES THEATER</p>
+            <p>MOVIES-NHK</p>
         </a>
         <div className='social'>
         <a href='#'><i className='bx bxl-facebook' ></i></a>

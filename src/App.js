@@ -8,7 +8,6 @@ import "./App.css";
 // import About from "./components/About";
 // import { Routes, Route, Link } from "react-router-dom";
 
-
 import React from "react";
 import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
