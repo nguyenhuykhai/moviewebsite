@@ -2,11 +2,13 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./Contact.module.scss";
 import classNames from "classnames/bind";
+import ScrollToMiddle from '../../components/GlobalFunctions/ScrollToMiddle'
 
 const cx = classNames.bind(styles);
 export default function About() {
   return (
     <section className={styles.main}>
+      <ScrollToMiddle />
       <div className={styles.firstScript}>
         <div className={styles.headline}>
           <h1 className={clsx(styles.title)}>Liên hệ</h1>
@@ -35,7 +37,7 @@ export default function About() {
         <div className={clsx(styles.formInput)}>
           <div className="form-group">
             <label for="Name">
-              Tên đầy đủ<span className="pink-color">*</span>
+              Tên đầy đủ
             </label>
             <input className={clsx(styles.formControl)} />
             <span className="text-danger field-validation-valid"></span>
@@ -49,7 +51,7 @@ export default function About() {
 
           <div className="form-group">
             <label for="PhoneNumber">
-              Số điện thoại<span className="pink-color">*</span>
+              Số điện thoại
             </label>
             <input className={clsx(styles.formControl)} />
             <span className="text-danger field-validation-valid"></span>
@@ -57,7 +59,7 @@ export default function About() {
 
           <div className="form-group">
             <label for="Content">
-              Nội dung<span className="pink-color">*</span>
+              Nội dung
             </label>
             <textarea className={clsx(styles.formTextArea)}></textarea>
             <span className="text-danger field-validation-valid"></span>

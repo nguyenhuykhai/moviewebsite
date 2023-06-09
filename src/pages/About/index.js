@@ -2,11 +2,13 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./About.module.scss";
 import classNames from "classnames/bind";
+import ScrollToMiddle from '../../components/GlobalFunctions/ScrollToMiddle'
 
 const cx = classNames.bind(styles);
 export default function About() {
   return (
     <section className={styles.main}>
+      <ScrollToMiddle />
       <div className={styles.firstScrip}>
         <div className={styles.headline}>
           <h2 className={styles.title}>Welcome!</h2>

@@ -9,6 +9,8 @@ export default function Nativation() {
       setScroll(window.scrollY > 0)
     }
     window.addEventListener('scroll', scrollElement)
+
+    
   }, [scroll])
 
   return (

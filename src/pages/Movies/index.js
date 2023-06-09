@@ -3,6 +3,7 @@ import { Route, Switch, useRouteMatch, Link } from "react-router-dom";
 import { movies } from "../../ListOfMovies";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import ScrollToTop from '../../components/GlobalFunctions/ScrollToTop'
 
 export default function Movies() {
   const [data, setData] = useState([]);
@@ -24,6 +25,7 @@ export default function Movies() {
 
   return (
     <div className="movies" id="movies">
+      <ScrollToTop />
       <h2 className="heading">Opening This Week</h2>
 
       <div className="movies-container">

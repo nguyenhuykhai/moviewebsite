@@ -3,6 +3,8 @@ import styles from "./Detail.module.scss";
 import clsx from "clsx";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import ScrollToMiddle from '../../components/GlobalFunctions/ScrollToMiddle'
+
 
 //Import MUI styles
 import PropTypes from "prop-types";
@@ -54,6 +56,7 @@ export default function Detail() {
           href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
         />
       </Helmet>
+      <ScrollToMiddle />
       <div className={clsx(styles.wrapper)}>
         <div className={clsx(styles.content)}>
           <div className={clsx(styles.videobox)}>
